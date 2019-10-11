@@ -5,28 +5,46 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+  @media @phone {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width:100%;
+  }//This is the end of first content for phone
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
-    }
+
+    @media @phone {
+      width: 100%;
+      padding-right:0;
+    }//This is the end of the text of first content for phone
+      }//End of the text content for first section
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+    @media @phone {
+      width:100%;
+      padding-let:0;
+    }//End of img phone section
       img {
         border-radius: 10px;
+    @media @phone {
+      width:100%;
+      padding-left:0;
+    }//This is the end of the phone image    
       }
     }
-  }
+  } // END OF FIRST SECTION
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
-
+  @media @phone {
+    flex-direction: column-reverse;
+  }//This end of the inverse content for phone
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -36,26 +54,69 @@
       padding-right: 1%;
       padding-left: 0;
     }
-  }
+  }//This is the end of the inverse content
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-
+  @media @phone {
+    width:100%;
+  }//This is the end of the phone for pick your content destination
     img {
       border-radius: 10px;
     }
-  }
+  }// This is the end of the content-destination 
 
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+  @media @phone {
+    flex-direction: column;
+  }//This is the end of content pick for phone
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    }
-  }
+    @media @phone {
+      width:100%;
+    }//End of destination for phone 
+    }// End of destination
+  }//This is the end of content-pick 
 }// home
+
+//Borderline div
+.top-border{
+  width:100%;
+  border-top: 2px dashed @navigation-border; 
+}//border
+
+//Welcome section
+
+.welcome-section {
+  width:100%;
+  padding-right: 1%;
+  padding-left: 0;
+  border-bottom: 2px dashed @navigation-border; 
+
+  @media @phone {
+    width:100%;
+}//This is the end of the welcome section for phone
+.fun-img {
+  width:100%;
+}//img end
+.welcome-h3 {
+  font-size: 3.2rem;
+  margin: 2% 0;
+}//End of the welcome h3
+}//end of the welcome section 
+
+.btn{
+  border-radius: 10%;
+  font-size: 2.7rem;
+  background: @button-bg;
+  color: @sandy-beach;
+@media @phone{
+  .btn(2% 39%, 1.6rem, center);
+}//This is for the buttons on phone
+}//This is for buttons
